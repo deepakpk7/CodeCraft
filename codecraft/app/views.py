@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -12,7 +13,9 @@ def contact(req):
     return render(req,'contact.html')
 
 def courses(req):
-    return render(req,'courses.html')
+    data=Courses.objects.all()
+    return render(req,'courses.html',{'courses':data})
+    
 
 def placement(req):
     return render(req,'placement.html')
