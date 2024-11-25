@@ -14,4 +14,11 @@ class Contact(models.Model):
     phone = models.CharField(max_length=15)
     message = models.TextField()
     
+class Placement(models.Model):
+    name=models.TextField()
+    course_name=models.TextField()
+    img=models.FileField()
+    company=models.TextField()
+
+    
     

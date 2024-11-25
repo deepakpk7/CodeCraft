@@ -5,36 +5,21 @@ from app.models import Contact
 from .models import *
 
 # Create your views here.
-
+# code@123 ---admin password--
 def index(req):
     return render(req,'index.html')
 
 def about(req):
     return render(req,'about.html')
 
-# def contact(req):
-#     if req.method=='POST':
-#         name=req.POST['name']
-#         email=req.POST['email']
-#         phone=req.POST['phone']
-#         service=req.POST['service']
-#         message=req.POST['message']
-#         print(name)
-#         print(email)
-#         print(phone)
-#         print(service)
-#         print(message)
-#         data=Contact.objects.create(name=name,email=email,phone=phone,service=service,message=message)
-#         data.save()
-#     return render(req,'contact.html')
 
 def courses(req):
     data=Courses.objects.all()
     return render(req,'courses.html',{'courses':data})
     
-
 def placement(req):
-    return render(req,'placement.html')
+    data=Placement.objects.all()
+    return render(req, 'placement.html', {'placements': data})
 
 
 def contact(req):
