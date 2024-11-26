@@ -4,6 +4,7 @@ from app.models import Contact
 
 from .models import *
 
+
 # Create your views here.
 # code@123 ---admin password--
 def index(req):
